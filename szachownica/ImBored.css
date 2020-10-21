@@ -1,0 +1,8 @@
+.amazing {
+    animation: magik 5s ease-in-out;
+}
+
+@keyframes magik {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

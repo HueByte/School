@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 640px;
+            height: 640px;
+        }
+
+        .color1 {
+            width: 80px;
+            height: 80px;
+            background-color: black;
+        }
+
+        .color2 {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        function chess() {
+            var checker = false;
+            for (let i = 1; i <= 64; i++) {
+                let el = document.createElement('div');
+                el.className = i % 2 == 0 ? checker ? 'color1' : 'color2' : checker ? 'color2' : 'color1';
+                checker = i % 8 == 0 ? !checker : checker;
+                document.getElementById('main').appendChild(el);
+            }
+        }
+    </script>
+</head>
+<body onload="chess()">
+
+    <div id="main" class="container">
+
+    </div>
+</body>
+
+</html>
